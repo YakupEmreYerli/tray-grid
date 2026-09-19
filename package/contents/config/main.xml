@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="General">
+    <entry name="columns" type="Int">
+      <label>Number of columns in the popup grid</label>
+      <default>4</default>
+      <min>1</min>
+      <max>8</max>
+    </entry>
+    <entry name="iconSize" type="Int">
+      <label>Icon size: 0 = small (16), 1 = small-medium (22), 2 = medium (32)</label>
+      <default>1</default>
+    </entry>
+    <entry name="showPassive" type="Bool">
+      <label>Also list items whose status is Passive</label>
+      <default>true</default>
+    </entry>
+    <entry name="excludedIds" type="StringList">
+      <label>Items (by id) that are not shown in the grid</label>
+      <default></default>
+    </entry>
+    <entry name="closeOnActivate" type="Bool">
+      <label>Close the popup after an item was activated or a menu entry chosen</label>
+      <default>true</default>
+    </entry>
+  </group>
+</kcfg>

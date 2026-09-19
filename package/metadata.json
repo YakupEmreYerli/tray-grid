@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "yakupemreyerli0@gmail.com",
+                "Name": "Yakup Emre Yerli"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Compact icon grid for status notifier (tray) applications, like the hidden icons flyout on Windows",
+        "Icon": "/contents/icons/tray-grid.svg",
+        "Id": "com.github.yakupemreyerli.traygrid",
+        "License": "GPL-2.0-or-later",
+        "Name": "Tray Grid",
+        "Version": "0.1.0",
+        "Website": "https://github.com/YakupEmreYerli/tray-grid"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
