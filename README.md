@@ -23,7 +23,7 @@ It talks to tray apps directly over D-Bus, the same StatusNotifierItem protocol 
 Tray Grid is built from source and installs per user, no root needed. It needs Plasma 6, KDE Frameworks 6.10+ and Qt 6.8+.
 
 ```bash
-# Arch: sudo pacman -S --needed cmake ninja extra-cmake-modules qt6-declarative kwindowsystem kiconthemes libplasma
+# Arch: sudo pacman -S --needed cmake ninja extra-cmake-modules qt6-declarative kwindowsystem kiconthemes kstatusnotifieritem libplasma
 git clone https://github.com/YakupEmreYerli/tray-grid.git && cd tray-grid
 cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$HOME/.local
 cmake --build build && ctest --test-dir build

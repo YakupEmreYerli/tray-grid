@@ -23,7 +23,7 @@ Tepsi uygulamalarıyla doğrudan D-Bus üzerinden, Plasma'nın kendi tepsisinin 
 Kaynaktan derlenir, kullanıcıya kurulur, yönetici yetkisi gerekmez. Plasma 6, KDE Frameworks 6.10+ ve Qt 6.8+ ister.
 
 ```bash
-# Arch: sudo pacman -S --needed cmake ninja extra-cmake-modules qt6-declarative kwindowsystem kiconthemes libplasma
+# Arch: sudo pacman -S --needed cmake ninja extra-cmake-modules qt6-declarative kwindowsystem kiconthemes kstatusnotifieritem libplasma
 git clone https://github.com/YakupEmreYerli/tray-grid.git && cd tray-grid
 cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$HOME/.local
 cmake --build build && ctest --test-dir build
