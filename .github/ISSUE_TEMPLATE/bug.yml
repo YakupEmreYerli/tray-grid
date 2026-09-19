@@ -1,0 +1,25 @@
+name: Bug report
+description: Something in the grid or a tray app's menu doesn't behave
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you saw instead.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Plasma, KDE Frameworks and Qt versions
+      placeholder: "Plasma 6.7.5, Frameworks 6.30, Qt 6.11 (kinfo prints all three)"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Wayland or X11
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: The tray item
+      description: If one app misbehaves, paste its line from `build/bin/sni-dump` (built with the project).

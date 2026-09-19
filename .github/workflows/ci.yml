@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    # Plasma 6 and its frameworks are current on Arch; Ubuntu runners lag behind.
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Install build dependencies
+        run: |
+          pacman -Syu --noconfirm --needed base-devel git cmake ninja extra-cmake-modules \
+            qt6-base qt6-declarative kwindowsystem kiconthemes libplasma dbus librsvg
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/tmp/prefix
+      - name: Build
+        run: cmake --build build
+      - name: End-to-end test (private D-Bus session, offscreen)
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: ctest --test-dir build --output-on-failure
+      - name: Install
+        run: cmake --install build
+      - name: Brand assets render
+        run: python3 tools/brand.py && git diff --stat
