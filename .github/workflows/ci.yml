@@ -15,7 +15,7 @@ jobs:
         run: |
           pacman -Syu --noconfirm --needed base-devel git cmake ninja extra-cmake-modules \
             qt6-base qt6-declarative kwindowsystem kiconthemes kstatusnotifieritem libplasma dbus librsvg vulkan-headers
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Configure
         run: cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/tmp/prefix
       - name: Build
