@@ -27,4 +27,4 @@ jobs:
       - name: Install
         run: cmake --install build
       - name: Brand assets render
-        run: python3 tools/brand.py && git diff --stat
+        run: python3 tools/brand.py
